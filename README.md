@@ -6,3 +6,9 @@
 * https://github.com/nlohmann/json/releases
 * https://github.com/mapnik/mapnik/releases/tag/v3.1.0
 * https://github.com/lava/matplotlib-cpp/blob/master/matplotlibcpp.h
+* https://github.com/glfw/glfw/releases/tag/3.3.5
+```
+mkdir build
+cmake ..
+make
+```
