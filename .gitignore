@@ -1,6 +1,7 @@
 # compiled.
 *.o
 *.out
+MAIN
 
 # cmake.
 build
