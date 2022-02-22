@@ -7,6 +7,7 @@
 
 using namespace std;
 
+
 /**
  * define before main function.
  */
