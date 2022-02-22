@@ -2,13 +2,13 @@
 
 .SILENT:
 compile:
-	g++ -std=c++11 -c Main.cpp
+	g++ -std=c++11 -c Main.cpp Sample.cpp
 
 link:
-	g++ -o ./MAIN Main.o
+	g++ -o ./MAIN Main.o Sample.o
 
 run:
-	g++ -std=c++11 -c Main.cpp && g++ -o ./MAIN Main.o && ./MAIN
+	g++ -std=c++11 -c Main.cpp Sample.cpp && g++ -o ./MAIN Main.o Sample.o && ./MAIN
 
 clean:
 	rm -f *.o

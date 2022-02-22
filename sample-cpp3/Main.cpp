@@ -3,6 +3,7 @@
 #include <string.h>
 #include <iostream>
 
+#include "Sample.hpp"
 
 using namespace std;
 
@@ -99,6 +100,25 @@ int main(int argc, const char* argv[]) {
     *po = 30;
     cout << *po << endl; // 30
     cout << po << endl; // address (equals)
+
+    // class.
+    Sample s = Sample(5);
+    s.greet();
+
+    cout << s.getAge() << endl;  // constructor set = return 5.
+
+    // setter.
+    s.setAge(10);
+
+    // getter.
+    cout << s.getAge() << endl;
+
+    // cout << s.myAge << endl; // error, myAge is private member.
+
+    // public member.
+    cout << s.publicAge << endl; // return 0.
+    s.publicAge = 20;
+    cout << s.publicAge << endl; // return 20.
 
     cout << "end" << endl;
     return 0;
