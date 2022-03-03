@@ -118,6 +118,7 @@ int main() {
   u.gender = 1;
   printf("age : %d, gender : %d\n", u.age, u.gender);
 
+  // typedef
   USER u2;
   u2.age = 30;
   u2.gender = 0;
