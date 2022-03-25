@@ -1,16 +1,19 @@
-from distutils.core import setup
-from distutils.extension import Extension
-from Cython.Distutils import build_ext
+from distutils.core import setup, Extension
+from Cython.Build import cythonize
 
 
-source = [
-    "./sample.pyx",
-    # "sample.cpp",
+sources = [
+    "mycalc.pyx",
 ]
+name = "mycalc"
+ext = Extension(name, sources=sources, include_dirs=['.'])
 
 setup(
-    cmdclass=dict(build_ext=build_ext),
-    ext_modules=[
-        Extension("mycalc", source, language="c++"),
-    ],
+    name=name,
+    ext_modules=cythonize(
+        [ext],
+        compiler_directives={
+            "language_level": "3"
+        }
+    ),
 )
